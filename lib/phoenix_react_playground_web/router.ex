@@ -16,6 +16,7 @@ defmodule PhoenixReactPlaygroundWeb.Router do
   scope "/", PhoenixReactPlaygroundWeb do
     pipe_through :browser
 
+    get "/r/*path", RController, :index
     get "/", PageController, :index
   end
 
